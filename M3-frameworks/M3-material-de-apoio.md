@@ -31,3 +31,9 @@ LTS: long term support:
 - .NET Framework: todos 
 - .NET Core: versões com final 1
 - .NET 5 e futuros: versões maiores
+
+## Runtime e SDK
+
+Runtime é necessário para execução da aplicação. Aplicações .NET são divididas em 3 partes: ASP.NET para WEB, Desktop para desktop, .NET Core para qualquer outra aplicação. O Runtime sómente roda a aplicação, tem um tamanho menor e otimizado, não é necessário para a compilação. A versão tem que ser compatível com a versão utilizada durante a codificação.
+
+SDK (Software Development Kit), tem o compilador, tudo o que é necessário para criar aplicações, dessa forma tem um tamanho muito maior. Já vem com o Runtime integrado.
