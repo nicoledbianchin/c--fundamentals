@@ -6,13 +6,13 @@ namespace Calculator
     {
         static void Main(string[] args)
         {
+            Console.Clear();
             Soma();
+            Subtracao();
         }
 
         static void Soma()
         {
-            Console.Clear();
-
             Console.WriteLine("Primeiro valor: ");
             float valor1 = float.Parse(Console.ReadLine());
 
@@ -21,8 +21,22 @@ namespace Calculator
 
             float resultado = valor1 + valor2;
 
-            Console.WriteLine("");
-            Console.WriteLine($"Resultado da soma: {resultado}");
+            Console.WriteLine($"\nResultado da soma: {resultado}\n");
+            Console.ReadKey();
+        }
+
+        static void Subtracao()
+        {
+            Console.WriteLine("Primeiro valor: ");
+            float valor1 = float.Parse(Console.ReadLine());
+
+            Console.WriteLine("Segundo valor: ");
+            float valor2 = float.Parse(Console.ReadLine());
+
+            float resultado = valor1 - valor2;
+
+            Console.WriteLine($"\nResultado da subtração: {resultado}");
+            Console.ReadKey();
         }
     }
 }
