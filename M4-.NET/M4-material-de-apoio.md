@@ -52,3 +52,16 @@ dotnet build // compila a aplicação
 dotnet clean // limpa as compilações anteriores
 dotnet run // compila e executa a aplicação
 ```
+
+## Variáveis de ambiente
+
+```csharp
+dotnet run --environment=${AMBIENTE}
+```
+
+## Estrutura do app gerado
+
+- Arquivo .csproj: tem formato XML, contém as definições do projeto (similar ao package.json no Node), e está presente em todo projeto .NET
+- Program.cs: é o arquivo principal do C#, a porta de entrada para a aplicação, e será o primeiro arquivo a ser executado.
+
+
