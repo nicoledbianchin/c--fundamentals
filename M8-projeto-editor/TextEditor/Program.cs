@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Threading;
 
 namespace TextEditor
 {
@@ -20,10 +22,10 @@ namespace TextEditor
             switch (option)
             {
                 case 1:
-                    AbrirArquivo();
+                    OpenFile();
                     break;
                 case 2:
-                    CriarArquivo();
+                    EditFile();
                     break;
                 case 0:
                     Console.WriteLine("Saindo do sistema.");
@@ -37,12 +39,40 @@ namespace TextEditor
 
         }
 
-        static void AbrirArquivo(){
+        static void OpenFile(){
 
         }
         
-        static void CriarArquivo(){
+        static void EditFile(){
+            Console.Clear();
+            Console.WriteLine("Digite seu texto abaixo (ESC para sair):");
+            Console.WriteLine("--------------------");
+            string text = "";
 
-        }   
+            do{
+                text += Console.ReadLine();
+                text += Environment.NewLine;
+            } while(Console.ReadKey().Key != ConsoleKey.Escape);
+            
+            SaveTextToFile(text);
+        }  
+
+        static void SaveTextToFile(string text){
+            Console.Clear();
+            Console.WriteLine("Qual caminho para salvar o arquivo?");
+            var path = Console.ReadLine();
+
+            // os objetos passado no using
+            // vai ser aberto e fechado
+            // útil para manipular arquivos, conexão de banco de dados, etc
+            // pois não precisamos nos preocupar em fechar a conexão ou o arquivo
+            using(var file = new StreamWriter(path)){
+                file.Write(text);
+            }
+
+            Console.WriteLine($"Arquivo salvo com sucesso no caminho {path}.");
+            Thread.Sleep(2500);
+            Menu();
+        } 
     }
 }
