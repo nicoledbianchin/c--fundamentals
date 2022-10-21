@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace Strings
 {
@@ -12,6 +13,7 @@ namespace Strings
             Comparacao();
             Indices();
             MetodosAdicionais();
+            Builder();
         }
 
 
@@ -104,6 +106,13 @@ namespace Strings
 
             Console.WriteLine(texto.Trim()); // remove os espaços do começo e do fim
             Console.WriteLine("");
+        }
+
+        static void Builder(){
+            // utilizado para construir strings complexas ou muito grandes, pois evita a criação de várias cópias da variável e diminui a necessidade de memórias
+            var texto = new StringBuilder();
+            texto.Append("Este texto é um teste");
+            Console.WriteLine(texto);
         }
     
     }
