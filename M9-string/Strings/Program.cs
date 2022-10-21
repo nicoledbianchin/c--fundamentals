@@ -9,6 +9,7 @@ namespace Strings
             Console.Clear();
             Guids();
             Interpolacao();
+            Comparacao();
         }
 
 
@@ -39,5 +40,28 @@ namespace Strings
             Console.WriteLine("");
         }
 
+        static void Comparacao(){
+            var texto = "Testando";
+            Console.WriteLine(texto.CompareTo("Testando")); // 0 = iguais
+            Console.WriteLine(texto.CompareTo("testando")); // 1 = diferentes
+            Console.WriteLine("");
+
+            Console.WriteLine(texto.Contains("a")); // true = contém
+            Console.WriteLine(texto.Contains("h")); // false = não contém
+            Console.WriteLine(texto.Contains("testando", StringComparison.OrdinalIgnoreCase)); // true, pois ignora maiúsculo
+            Console.WriteLine("");
+            
+            // Console.WriteLine(texto.Contains(null)); erro pois não é uma comparação válida
+
+            Console.WriteLine(texto.StartsWith("Tes")); // true
+            Console.WriteLine(texto.EndsWith("O")); // false
+            Console.WriteLine("");
+
+            // Equals existe em vários outros objetos do C#, os dois objetos devem ser exatamente iguais
+            Console.WriteLine(texto.Equals("Testando")); // true
+            Console.WriteLine(texto.Equals("testando")); // false
+            Console.WriteLine("");
+        }
+    
     }
 }
