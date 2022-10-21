@@ -8,6 +8,7 @@ namespace Strings
         {
             Console.Clear();
             Guids();
+            Interpolacao();
         }
 
 
@@ -22,5 +23,21 @@ namespace Strings
             Console.WriteLine("Primeiros 8 caracteres do Guid: " + parteIdentificador);
             Console.WriteLine("");
         }
+
+        static void Interpolacao(){
+            double preco = 10.2;
+
+            string interpolacaoSimples = "Preço: " + preco; // price automaticamente convertido para string
+            Console.WriteLine("Interpolação simples: " + interpolacaoSimples);
+
+            string format = string.Format("Preço: {0}, com desconto: {1}", preco, 8);
+            Console.WriteLine("String format: " + format);
+
+            string interpolarCifrao = $"Preço: {preco}";
+            Console.WriteLine("Interpolar com $: " + interpolarCifrao);
+
+            Console.WriteLine("");
+        }
+
     }
 }
