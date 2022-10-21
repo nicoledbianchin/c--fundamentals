@@ -10,6 +10,7 @@ namespace Strings
             Guids();
             Interpolacao();
             Comparacao();
+            Indices();
         }
 
 
@@ -61,6 +62,13 @@ namespace Strings
             Console.WriteLine(texto.Equals("Testando")); // true
             Console.WriteLine(texto.Equals("testando")); // false
             Console.WriteLine("");
+        }
+
+        static void Indices(){
+            var texto = "Este texto é um teste";
+            Console.WriteLine(texto.IndexOf("e")); // 3, pois devolve a posição da primeira aparição da letra
+            Console.WriteLine(texto.LastIndexOf("e")); // 20, devolve a posição da última aparição da letra
+            Console.WriteLine(texto.IndexOf("h")); // -1, pois não tem essa letra
         }
     
     }
