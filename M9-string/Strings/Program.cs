@@ -11,6 +11,7 @@ namespace Strings
             Interpolacao();
             Comparacao();
             Indices();
+            MetodosAdicionais();
         }
 
 
@@ -69,6 +70,40 @@ namespace Strings
             Console.WriteLine(texto.IndexOf("e")); // 3, pois devolve a posição da primeira aparição da letra
             Console.WriteLine(texto.LastIndexOf("e")); // 20, devolve a posição da última aparição da letra
             Console.WriteLine(texto.IndexOf("h")); // -1, pois não tem essa letra
+            Console.WriteLine("");
+        }
+
+        static void MetodosAdicionais(){
+            var texto = "Este texto é um teste";
+            Console.WriteLine(texto.ToUpper()); // converte tudo para maiúsculo
+            Console.WriteLine(texto.ToLower()); // converte tudo para minúsculo
+            Console.WriteLine("");
+
+            Console.WriteLine(texto.Insert(11, "AQUI ")); // Este aqui texto é um teste
+            Console.WriteLine(texto.Remove(5, 6)); // Este é um teste
+            Console.WriteLine("");
+
+            Console.WriteLine(texto.Length); // 21
+            Console.WriteLine("");
+
+            Console.WriteLine(texto.Replace("Este", "Isto"));
+            Console.WriteLine(texto.Replace("e", "X")); // faz replace em todas as strings
+            Console.WriteLine("");
+
+            var divisao = texto.Split(" "); // divide a string em todo lugar que tem espaço, e cria uma lista com cada pedaço da string
+            Console.WriteLine(divisao[0]);
+            Console.WriteLine(divisao[1]);
+            Console.WriteLine(divisao[2]);
+            Console.WriteLine(divisao[3]);
+            Console.WriteLine(divisao[4]);
+            Console.WriteLine("");
+
+            var resultado = texto.Substring(5, 5); // texto
+            Console.WriteLine(resultado);
+            Console.WriteLine("");
+
+            Console.WriteLine(texto.Trim()); // remove os espaços do começo e do fim
+            Console.WriteLine("");
         }
     
     }
