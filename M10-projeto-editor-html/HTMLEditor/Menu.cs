@@ -49,10 +49,8 @@ namespace HTMLEditor
             Console.SetCursorPosition(3,6);
             Console.WriteLine("1 - Novo arquivo");
             Console.SetCursorPosition(3,7);
-            Console.WriteLine("2 - Abrir");
-            Console.SetCursorPosition(3,9);
             Console.WriteLine("0 - Sair");
-            Console.SetCursorPosition(3,10);
+            Console.SetCursorPosition(3,9);
             Console.Write("Opção: ");
         }
 
@@ -61,9 +59,6 @@ namespace HTMLEditor
             switch(option){
                 case 1:
                     Editor.Show();
-                    break;
-                case 2:
-                    Console.WriteLine("View");
                     break;
                 case 0:
                     Console.Clear();
