@@ -1,5 +1,4 @@
 ﻿using System.Globalization;
-using System.ComponentModel.DataAnnotations;
 using System;
 
 namespace Moedas
@@ -23,6 +22,13 @@ namespace Moedas
             Console.BackgroundColor = ConsoleColor.Black;
             Console.ForegroundColor = ConsoleColor.White;
             FormatandoMoedas();
+
+            Console.BackgroundColor = ConsoleColor.White;
+            Console.ForegroundColor = ConsoleColor.Black;
+            Console.WriteLine("Math");
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.ForegroundColor = ConsoleColor.White;
+            FuncaoMath();
         }
 
         static void TipoParaMoeda()
@@ -74,6 +80,18 @@ namespace Moedas
                 "P",
                 CultureInfo.CreateSpecificCulture("pt-BR")
             ));
+        }
+
+        static void FuncaoMath()
+        {
+            decimal valor = 10.15m;
+            Console.WriteLine(Math.Round(valor));
+
+            decimal outroValor = 10.87m;
+            Console.WriteLine(Math.Round(outroValor));
+
+            Console.WriteLine(Math.Ceiling(valor));
+            Console.WriteLine(Math.Floor(valor));
         }
     }
 }
